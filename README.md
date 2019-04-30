@@ -20,7 +20,7 @@ This will display a vertical list of webpages that your users can navigate to.
 ### Properties
 
 |property|required|default|description|
-|---|---|---|
+|---|---|---|---|
 |path|true|""|The relative path after `/App/Content/pages/` to load webpages from|
 |length|false|"10"|The amount of webpages to display in the list before showing paging buttons at the bottom of the list|
 |recursive|false|"true"|Recurse through subfolders to find even more webpages to load into the list|

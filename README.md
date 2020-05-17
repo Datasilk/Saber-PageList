@@ -1,4 +1,4 @@
-# PageList
+# Page List
 A vendor plugin for the [Saber](https://github.com/Datasilk/Saber) CMS platform that can display a list of web pages that belong to a Saber website.
 
 ### Prerequisites

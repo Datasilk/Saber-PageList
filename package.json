@@ -1,0 +1,23 @@
+{
+  "name": "pagelist",
+  "version": "1.0.0",
+  "description": "A vendor plugin for the [Saber](https://github.com/Datasilk/Saber) CMS platform that can display a list of web pages that belong to a Saber website.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/datasilk/saber-pagelist.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/datasilk/saber-pagelist/issues"
+  },
+  "homepage": "https://github.com/datasilk/saber-pagelist#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-less": "^4.0.1"
+  }
+}

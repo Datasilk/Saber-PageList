@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Saber.Vendor.PageList</RootNamespace>
+    <AssemblyName>Saber.Vendor.PageList</AssemblyName>
+    <Authors>Mark Entingh</Authors>
+    <Company>Datasilk</Company>
+    <Description>A vendor plugin for Saber (https://saber.datasilk.io/saber) that allows users to add a list of URL links to their web page.</Description>
+    <Copyright>2020 Datasilk</Copyright>
+    <PackageProjectUrl></PackageProjectUrl>
+    <RepositoryUrl>https://www.github.com/Datasilk/Saber-PageList</RepositoryUrl>
+    <RepositoryType>GitHub</RepositoryType>
+    <Product>Saber.Vendor.PageList</Product>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Saber.Vendor" Version="1.0.5" />
+  </ItemGroup>
+</Project>

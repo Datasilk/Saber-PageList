@@ -1,15 +1,23 @@
 # Page List
-A vendor plugin for the [Saber](https://github.com/Datasilk/Saber) CMS platform that can display a list of web pages that belong to a Saber website.
+A vendor plugin for the [Saber](https://saber.datasilk.io) CMS platform that can display a list of web pages that belong to a Saber website.
 
 ### Prerequisites
-* Visual Studio 2017
-* Clone [Saber](https://github.com/Datasilk/Saber) repository
+* [Saber](https://saber.datasilk.io) ([latest release](https://github.com/Datasilk/Saber/releases))
 
 ### Installation
-* Clone this repository inside your Saber project within `/App/Vendor/` and name the folder **PageList**
+#### For Visual Studio Users
+* Clone this repository inside your Saber project within `/App/Vendors/` and name the folder **PageList**
 	> NOTE: use `git clone` instead of `git submodule add` since the contents of the Vendor folder is ignored by git
-* Run `gulp default`
+* Run `gulp default` from the root of your Saber project folder
 
+#### For DevOps Users
+While using the latest release of Saber, do the following:
+* Download latest release of [Saber.Vendor.PageList](https://github.com/Datasilk/Saber-PageList/releases)
+* Extract all files & folders from either the `win-x64` or `linux-x64` zip folder to Saber's `/Vendors/` folder
+
+### Publish
+* run command `./publish.bat`
+* publish `bin/Publish/PageList.7z` as latest release
 ### Usage
 To use a page list within your Saber website, log into your website and access Saber's **Editor UI** by pressing the *Esc* key. Then, within your webpage *html* file, add the following example:
 
@@ -59,4 +67,4 @@ Below is a list of html variables used for loading the page list & paging button
 
 ----
 
-Developed by [Mark Entingh](https://www.markentingh.com), who is the creator of Saber and [Datasilk](https://www.datasilk.io).
+Developed by [Mark Entingh](https://www.markentingh.com), who is the creator of [Saber](https://saber.datasilk.io) and [Datasilk](https://www.datasilk.io).

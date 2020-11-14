@@ -35,7 +35,7 @@ namespace Saber.Vendor.PageList
                             "length",
                             new ViewDataBinderParameter()
                             {
-                                DefaultValue = "10",
+                                DefaultValue = "4",
                                 Description = "Total webpages to display within the list."
                             }
                         },
@@ -64,11 +64,10 @@ namespace Saber.Vendor.PageList
                             }
                         },
                     },
-                    Callback = new Func<IRequest, string, string, List<KeyValuePair<string, string>>>((request, data, prefix) =>
+                    Callback = new Func<View, IRequest, Dictionary<string, string>, string, string, List<KeyValuePair<string, string>>>((view, request, data, prefix, key) =>
                     {
                         var results = new List<KeyValuePair<string, string>>();
-                        var args = ViewData.GetMethodArgs(data);
-                        /* args /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                        /* data /////////////////////////////////////////////////////////////////////////////////////////////////////////////
                          * 
                          * path: (required) relative path from "/Content/pages/" used to list pages from
                          * length: (optional) the amount of pages to display before showing paging buttons at the bottom of the list
@@ -82,15 +81,15 @@ namespace Saber.Vendor.PageList
                         var containerTemplate = "/Vendors/PageList/container.html";
                         var itemTemplate = "/Vendors/PageList/page.html";
                         var recursive = true;
-                        if (args.ContainsKey("container-file"))
+                        if (data.ContainsKey("container-file"))
                         {
                             //get custom container template
-                            containerTemplate = args["container-file"];
+                            containerTemplate = data["container-file"];
                         }
-                        if (args.ContainsKey("item-file"))
+                        if (data.ContainsKey("item-file"))
                         {
                             //get custom item template
-                            itemTemplate = args["item-file"];
+                            itemTemplate = data["item-file"];
                         }
                         else
                         {
@@ -98,22 +97,28 @@ namespace Saber.Vendor.PageList
                             request.AddCSS("/css/vendors/pagelist/pagelist.css", "pagelist");
                         }
 
-                        if (args.ContainsKey("recursive"))
+                        if (data.ContainsKey("recursive"))
                         {
                             try
                             {
-                                recursive = bool.Parse(args["recursive"]);
+                                recursive = bool.Parse(data["recursive"]);
                             }
                             catch (Exception) { }
                         }
                         var container = new View(containerTemplate);
                         var item = new View(itemTemplate);
                         var files = new string[] { };
-                        if (args.ContainsKey("path"))
+                        var path = "";
+                        var length = 4;
+                        if (data.ContainsKey("path"))
                         {
-                            files = Directory.GetFiles(App.MapPath("/Content/pages/" + args["path"]), "*.html", recursive ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly);
+                            path = data["path"];
                         }
-
+                        if (data.ContainsKey("length"))
+                        {
+                            int.TryParse(data["length"], out length);
+                        }
+                        files = Directory.GetFiles(App.MapPath("/Content/pages/" + path), "*.html", recursive ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly);
                         if (files.Length > 0)
                         {
                             files = files.Select(f =>
@@ -131,8 +136,11 @@ namespace Saber.Vendor.PageList
 
                         //get config files for each page
                         var html = new StringBuilder();
+                        var i = 0;
                         foreach (var file in files)
                         {
+                            i++;
+                            if(i > length){break; }
                             if (file.IndexOf("template.html") > 0) { continue; }
                             var config = PageInfo.GetPageConfig(file);
                             item["title"] = config.title.body;
@@ -145,7 +153,7 @@ namespace Saber.Vendor.PageList
                         container["list"] = html.ToString();
 
                         //TODO: paging buttons
-                        results.Add(new KeyValuePair<string, string>("page-list", container.Render()));
+                        results.Add(new KeyValuePair<string, string>(prefix + key, container.Render()));
                         return results;
                     })
                 }

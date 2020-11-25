@@ -1,0 +1,36 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64">
+<defs>
+<g id="iconPageList_0_Layer1_0_FILL">
+<path fill="#FFFFFF" stroke="none" d="
+M 18 55
+L 18 60 64 60 64 55 18 55
+M 12 58
+Q 12 55.5 10.2 53.75 8.45 52 6 52 3.5 52 1.75 53.75 0 55.5 0 58 0 60.45 1.75 62.2 3.5 64 6 64 8.45 64 10.2 62.2 12 60.45 12 58
+M 10.2 36.2
+Q 12 34.45 12 32 12 29.5 10.2 27.75 8.45 26 6 26 3.5 26 1.75 27.75 0 29.5 0 32 0 34.45 1.75 36.2 3.5 38 6 38 8.45 38 10.2 36.2
+M 12 6
+Q 12 3.5 10.2 1.75 8.45 0 6 0 3.5 0 1.75 1.75 0 3.5 0 6 0 8.45 1.75 10.2 3.5 12 6 12 8.45 12 10.2 10.2 12 8.45 12 6
+M 64 35
+L 64 30 18 30 18 35 64 35
+M 64 9
+L 64 4 18 4 18 9 64 9 Z"/>
+</g>
+
+<g id="iconPageList_0_Layer0_0_FILL">
+<path fill="#FFFFFF" fill-opacity="0" stroke="none" d="
+M 64 0
+L 0 0 0 63.95 64 63.95 64 0 Z"/>
+</g>
+</defs>
+
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<use xlink:href="#iconPageList_0_Layer1_0_FILL"/>
+</g>
+
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<use xlink:href="#iconPageList_0_Layer0_0_FILL"/>
+</g>
+</g>
+</svg>

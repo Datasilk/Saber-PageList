@@ -4,8 +4,9 @@ using System.Linq;
 using System.IO;
 using System.Text;
 using Saber.Core;
+using Saber.Vendor;
 
-namespace Saber.Vendor.PageList
+namespace Saber.Vendors.PageList
 {
     /// <summary>
     /// Used to bind view html variables to platform args
@@ -27,16 +28,19 @@ namespace Saber.Vendor.PageList
                             "path",
                             new HtmlComponentParameter()
                             {
+                                Name = "Path",
                                 Required = true,
                                 DefaultValue = "",
-                                Description = ""
+                                Description = "The relative path to search for web pages within your website."
                             }
                         },
                         {
                             "length",
                             new HtmlComponentParameter()
                             {
-                                DefaultValue = "4",
+                                Name = "Length",
+                                DataType = HtmlComponentParameterDataType.Number,
+                                DefaultValue = "",
                                 Description = "Total webpages to display within the list."
                             }
                         },
@@ -44,6 +48,8 @@ namespace Saber.Vendor.PageList
                             "recursive",
                             new HtmlComponentParameter()
                             {
+                                Name = "Recursive",
+                                DataType = HtmlComponentParameterDataType.Boolean,
                                 DefaultValue = "true",
                                 Description = "If true, will include webpages from sub-folders in the list."
                             }
@@ -52,16 +58,18 @@ namespace Saber.Vendor.PageList
                             "container-file",
                             new HtmlComponentParameter()
                             {
-                                DefaultValue = "/Vendors/PageList/container.html",
-                                Description = "Allows the user to define a custom html template for the page-list container, which includes paging buttons."
+                                Name = "Container File",
+                                DefaultValue = "",
+                                Description = "Relative path to your custom html template used as the container for list items and can include paging buttons."
                             }
                         },
                         {
                             "item-file",
                             new HtmlComponentParameter()
                             {
-                                DefaultValue = "/Vendors/PageList/page.html",
-                                Description = "Allows the user to define a custom html template for an item within the page-list, which includes the title & description of a webpage, the author & creation date, along with a thumbnail image."
+                                Name = "Item File",
+                                DefaultValue = "",
+                                Description = "Relative path to your custom html template for a list item, which includes the title & description of a webpage, the author & creation date, along with a thumbnail image."
                             }
                         },
                     },

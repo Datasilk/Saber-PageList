@@ -12,7 +12,7 @@ A vendor plugin for the [Saber](https://saber.datasilk.io) CMS platform that can
 
 #### For DevOps Users
 While using the latest release of Saber, do the following:
-* Download latest release of [Saber.Vendor.PageList](https://github.com/Datasilk/Saber-PageList/releases)
+* Download latest release of [Saber.Vendors.PageList](https://github.com/Datasilk/Saber-PageList/releases)
 * Extract all files & folders from either the `win-x64` or `linux-x64` zip folder to Saber's `/Vendors/` folder
 
 ### Publish

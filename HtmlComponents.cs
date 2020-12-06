@@ -11,7 +11,7 @@ namespace Saber.Vendors.PageList
     /// <summary>
     /// Used to bind view html variables to platform args
     /// </summary>
-    public class HtmlComponent: IVendorHtmlComponent
+    public class HtmlComponents: IVendorHtmlComponents
     {
         public List<HtmlComponentModel> Bind()
         {

@@ -8,7 +8,7 @@ A vendor plugin for the [Saber](https://saber.datasilk.io) CMS platform that can
 #### For Visual Studio Users
 * Clone this repository inside your Saber project within `/App/Vendors/` and name the folder **PageList**
 	> NOTE: use `git clone` instead of `git submodule add` since the contents of the Vendor folder is ignored by git
-* Run `gulp default` from the root of your Saber project folder
+* Run `gulp vendors` from the root of your Saber project folder
 
 #### For DevOps Users
 While using the latest release of Saber, do the following:

@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>Saber.Vendor.PageList</RootNamespace>
-    <AssemblyName>Saber.Vendor.PageList</AssemblyName>
+    <RootNamespace>Saber.Vendors.PageList</RootNamespace>
+    <AssemblyName>Saber.Vendors.PageList</AssemblyName>
     <Authors>Mark Entingh</Authors>
     <Company>Datasilk</Company>
     <Description>A vendor plugin for Saber (https://saber.datasilk.io/saber) that allows users to add a list of URL links to their web page.</Description>
@@ -10,7 +10,7 @@
     <PackageProjectUrl></PackageProjectUrl>
     <RepositoryUrl>https://www.github.com/Datasilk/Saber-PageList</RepositoryUrl>
     <RepositoryType>GitHub</RepositoryType>
-    <Product>Saber.Vendor.PageList</Product>
+    <Product>Saber.Vendors.PageList</Product>
   </PropertyGroup>
 
   <ItemGroup>

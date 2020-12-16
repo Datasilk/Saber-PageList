@@ -103,7 +103,7 @@ namespace Saber.Vendors.PageList
                         else
                         {
                             //include css file for page lists
-                            request.AddCSS("/css/vendors/pagelist/pagelist.css", "pagelist");
+                            request.AddCSS("/editor/vendors/pagelist/pagelist.css", "pagelist");
                         }
 
                         if (args.ContainsKey("recursive"))
